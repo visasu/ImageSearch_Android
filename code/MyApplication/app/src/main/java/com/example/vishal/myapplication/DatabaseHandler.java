@@ -12,6 +12,28 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 /**
+<<<<<<< HEAD
+ * Copyright (c) 2017 Vishal Srivastava<vsriva10@asu.edu>
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+=======
+>>>>>>> e946ccf91f72080f85bd4d6cf1c4a6b87489e6c1
  * Created by vishal on 4/12/17.
  */
 
@@ -53,8 +75,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         try {
+<<<<<<< HEAD
+=======
             //cont.deleteDatabase(DATABASE_NAME);
             //db.execSQL("delete from "+ TABLE_CONTEXT);
+>>>>>>> e946ccf91f72080f85bd4d6cf1c4a6b87489e6c1
             String CREATE_DB_TABLE = "CREATE TABLE " + TABLE_CONTEXT + "("
                     + KEY_FNAME + " TEXT PRIMARY KEY," + KEY_UTIME + " TEXT,"
                     + KEY_TTAGS + " TEXT," + KEY_PTAGS + " TEXT," + KEY_ITAGS + " TEXT);";
@@ -75,6 +100,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         // Create tables again
         onCreate(db);
     }
+<<<<<<< HEAD
+=======
     /*
     @Override
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -88,11 +115,15 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     /**
      * All CRUD(Create, Read, Update, Delete) Operations
      */
+>>>>>>> e946ccf91f72080f85bd4d6cf1c4a6b87489e6c1
     boolean recordExist (String fieldValue) {
         SQLiteDatabase db = this.getReadableDatabase();
         try {
             Log.w("Query",fieldValue);
+<<<<<<< HEAD
+=======
             //String Query = "Select * from " + TABLE_CONTEXT + " where " + KEY_FNAME + " = " + fieldValue;
+>>>>>>> e946ccf91f72080f85bd4d6cf1c4a6b87489e6c1
             Cursor cursor = db.query(TABLE_CONTEXT,new String[] {KEY_FNAME}, KEY_FNAME +"=?",new String[]{fieldValue},null,null,null);
             if (cursor.getCount() <= 0) {
                 cursor.close();

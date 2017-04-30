@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+
+/*
+ * Copyright (c) 2017 Vishal Srivastava<vsriva10@asu.edu>
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+
+ * Created by vishal on 4/1/17.
+ */
+
+=======
+>>>>>>> e946ccf91f72080f85bd4d6cf1c4a6b87489e6c1
 package com.example.vishal.myapplication;
 
 import android.Manifest;
@@ -30,9 +58,12 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.TreeMap;
 
+<<<<<<< HEAD
+=======
 /**
  * Created by vishal on 4/1/17.
  */
+>>>>>>> e946ccf91f72080f85bd4d6cf1c4a6b87489e6c1
 public class Utils {
 
     private Context _context;
@@ -216,6 +247,8 @@ public class Utils {
             // getting list of file paths
             Log.d("Dir",directory.toString());
             File[] listFiles = directory.listFiles();
+<<<<<<< HEAD
+=======
 /*            if (ContextCompat.checkSelfPermission(_context, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
                 Log.d("Dir", "Inside dir");
             }
@@ -223,6 +256,7 @@ public class Utils {
                 ActivityCompat.requestPermissions(, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 12321);
             }
 */            // Check for count
+>>>>>>> e946ccf91f72080f85bd4d6cf1c4a6b87489e6c1
             if (listFiles.length > 0){
 
                 // loop through all files

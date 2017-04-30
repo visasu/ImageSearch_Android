@@ -1,0 +1,19 @@
+Read the README file for understanding the system requirements and the dependencies
+
+Steps to compile:
+
+1. Navigate to code directory
+2. A Makefile is provided with the code, type in terminal 'make datasets'
+This should compile generate the datset and populate with images
+3. For running training for tensorflow model, change the no. of iterations you want to train for in tensorFacenet.py
+4. Then type in terminal 'make tensor_run'. This should run the tensorflow model for training, status will be displayed after iterations as mentioned in tensorFacenet.py
+5. After training it will automatically run the Test set with accuracy
+6. Now to Freeze and optimize the graph for inference type 'make freeze'
+7. Now type in 'make android_port' to generate copy the model in the 'My Application' Android project.
+8. Open the Android Studio and compile the project. After that you can port the APK file generated to your device.
+9. Before running port the 'tester' directory to '/storage/emulated/0/DCIM/'. This will provide it with dataset to run inference 
+10. Note it might crash on first attempt due to requirement for permissions for access device storage. Try again and it should work.
+11. There could be lot of lag in the app as each change in the Activity results into re-inferncing all the images which could take about 2-5 sec.
+
+Developer: Vishal Srivastava<vsriva10@asu.edu>
+
