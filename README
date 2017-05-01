@@ -9,6 +9,7 @@ Dependencies:
 1. Tensorflow
 2. Python Imaging Library
 3. Android Studio with SDK 26 and NDK 17
+4. Imagemagick
 
 The above software are available as free software
 Compilation steps are available as compilation_steps.txt
