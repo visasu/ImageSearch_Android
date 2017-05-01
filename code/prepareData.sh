@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-<<<<<<< HEAD
 : '
 Copyright (c) 2017 Vishal Srivastava<vsriva10@asu.edu>
 
@@ -21,8 +20,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 '
-=======
->>>>>>> e946ccf91f72080f85bd4d6cf1c4a6b87489e6c1
 wget -4 "http://conradsanderson.id.au/lfwcrop/lfwcrop_grey.zip";
 unzip lfwcrop_grey;
 file="classes.txt";

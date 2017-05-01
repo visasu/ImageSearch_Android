@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-<<<<<<< HEAD
 """
 Copyright (c) 2017 Vishal Srivastava<vsriva10@asu.edu>
 
@@ -21,8 +20,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
-=======
->>>>>>> e946ccf91f72080f85bd4d6cf1c4a6b87489e6c1
 
 from tensorflow.python.tools import freeze_graph 
 from tensorflow.python.tools import optimize_for_inference_lib
@@ -36,11 +33,7 @@ input_graph_path = MODEL_NAME+'.pbtxt'
 checkpoint_path = './'+MODEL_NAME+'.ckpt'
 input_saver_def_path = ""
 input_binary = False
-<<<<<<< HEAD
 input_node_names = "x"
-=======
-input_node_names = "I"
->>>>>>> e946ccf91f72080f85bd4d6cf1c4a6b87489e6c1
 output_node_names = "out"
 restore_op_name = "save/restore_all"
 filename_tensor_name = "save/Const:0"
@@ -62,11 +55,7 @@ with tf.gfile.Open(output_frozen_graph_name, "r") as f:
 print("Optimizing graph for inference\n");
 output_graph_def = optimize_for_inference_lib.optimize_for_inference(
 	input_graph_def,
-<<<<<<< HEAD
 	["x"], # an array of the input node(s)
-=======
-	["I"], # an array of the input node(s)
->>>>>>> e946ccf91f72080f85bd4d6cf1c4a6b87489e6c1
 	["out"], # an array of output nodes
 	tf.float32.as_datatype_enum)
 

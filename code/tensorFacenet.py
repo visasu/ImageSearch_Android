@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-<<<<<<< HEAD
 """
 Copyright (c) 2017 Vishal Srivastava<vsriva10@asu.edu>
 
@@ -22,9 +21,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-=======
->>>>>>> e946ccf91f72080f85bd4d6cf1c4a6b87489e6c1
-
 import tensorflow as tf
 import time
 
@@ -33,11 +29,7 @@ import random as ran
 import imTransform
 
 learning_rate = 0.0005
-<<<<<<< HEAD
 training_iters = 1600;
-=======
-training_iters = 40;
->>>>>>> e946ccf91f72080f85bd4d6cf1c4a6b87489e6c1
 batch_size = 10;
 display_step = 4;
 
