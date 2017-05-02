@@ -1,0 +1,47 @@
+Directory contains the following
+code/
+data/
+images/
+
+Code:
+Contains all the compilation code required to build the project
+Dependencies:
+1. Tensorflow
+2. Python Imaging Library
+3. Android Studio with SDK 26 and NDK 17
+4. Imagemagick
+
+The above software are available as free software
+Compilation steps are available as compilation_steps.txt
+Tested Platform:
+For Training
+OS: Ubuntu 16.04 (linux 4.10.1)
+Processor: Intel i5 4th Gen
+Memory: 11.5 GB
+Diskspace: 256 GB
+
+For Inference
+OS: Android 6
+Device: Nexus 5X 32 GB
+
+During Training:
+Max Memory Consumption: 5.2 GB
+1 Iteration Time(Avg.): 12 sec
+
+During Inference:
+Delay: 130ms - 320ms(varies)
+
+Batch Size: 
+Training: 1203 Images (64x64, grayscale)
+Testing: 90 Images (64x64, grayscale)
+
+Inference Dataset:
+Testing: 9 Images (each from a class)
+
+CNN Model: Facenet NN1
+Output Classes: 9
+ 
+Licences: MIT Standard Licence
+
+Developer: Vishal Srivastava<vsriva10@asu.edu>
+
