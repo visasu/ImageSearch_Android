@@ -5,11 +5,13 @@ tensor_run:
 freeze:
 	python freeze_optimize.py
 android_port:
+	svn checkout https://github.com/visasu/ImageSearch_Android/trunk/code/MyApplication
 	cp optimized_facenet.pb ./MyApplication/app/src/main/assets/
 complete:
 	bash prepareData.sh;
 	python tensorFacenet.py;
 	python freeze_optimize.py;
+	svn checkout https://github.com/visasu/ImageSearch_Android/trunk/code/MyApplication
 	cp optimized_facenet.pb ./MyApplication/app/src/main/assets/;
 clean_data:
 	rm -rf dataset
