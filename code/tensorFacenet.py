@@ -49,15 +49,20 @@ def conv2d(x, W, b, strides=1):
 def maxpool2d(x, k=2):
 	return tf.nn.max_pool(x, ksize=[1, k, k, 1], strides=[1, k, k, 1], padding='SAME')
 
+def rnorm(x):
+	return tf.contrib.layers.layer_norm(inputs=x)
+
 def conv_net(x, weights, biases, dropout):
 	x = tf.reshape(x, shape=[-1, 64, 64, 1])
 	
 	conv1 = conv2d(x, weights['wc1'], biases['bc1'])
 	pool1 = maxpool2d(conv1, k=2)
 	#rnorm1
+	pool1 = rnorm(pool1)
 	conv2a = conv2d(pool1, weights['wc2a'], biases['bc2a'])
 	conv2 = conv2d(conv2a, weights['wc2'], biases['bc2'])
 	#rnorm2
+	conv2 = rnorm(conv2)
 	pool2 = maxpool2d(conv2, k=2)
 	conv3a = conv2d(pool2, weights['wc3a'], biases['bc3a'])
 	conv3 = conv2d(conv3a, weights['wc3'], biases['bc3'])
@@ -143,8 +148,9 @@ accuracy = tf.reduce_mean(tf.cast(correct_pred, tf.float32))
 
 saver = tf.train.Saver()
 init = tf.global_variables_initializer()
-
 with tf.Session() as sess:
+	#print("Restoring Graph")
+	#saver.restore(sess, 'facenet.ckpt')
 	sess.run(init)
 	step = 1
 	start = time.time()
