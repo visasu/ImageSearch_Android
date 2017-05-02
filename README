@@ -10,6 +10,7 @@ Dependencies:
 2. Python Imaging Library
 3. Android Studio with SDK 26 and NDK 17
 4. Imagemagick
+5. SVN
 
 The above software are available as free software
 Compilation steps are available as compilation_steps.txt
@@ -45,3 +46,4 @@ Licences: MIT Standard Licence
 
 Developer: Vishal Srivastava<vsriva10@asu.edu>
 
+Read compilation.txt for next steps
